@@ -51,14 +51,14 @@ const update = () => {
 .sidebar-hd {
   height: 30vh;
   padding-top: 15vh;
-  background:url('@/assets/img/bg.jpg') no-repeat 50%;
+  background:url('@/assets/images/bg.jpg') no-repeat 50%;
   background-size: cover;
   display: flex;
 
   .avatar {
     width: 80px;
     height: 80px;
-    background: url('@/assets/img/profile.jpg') no-repeat 50%;
+    background: url('@/assets/images/profile.jpg') no-repeat 50%;
     background-size: cover;
     border-radius: 40px;
     margin: 0 24px;

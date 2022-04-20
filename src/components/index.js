@@ -1,4 +1,4 @@
-import Icon from './Icon.vue'
+import Icon from './icon'
 
 export default {
   install(app) {

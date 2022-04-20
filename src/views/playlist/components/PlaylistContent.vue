@@ -7,7 +7,7 @@
       :to="'/playlist/' + item.id"
     >
       <div class="remd_img">
-        <img class="u-img" :src="item.coverImgUrl" />
+        <img class="u-img" v-lazy="item.coverImgUrl" />
         <div class="u-earp remd_lnum">{{ formatPlayCount(item.playCount) }}</div>
       </div>
       <span class="remd_text f-thide2">{{ item.name }}</span>

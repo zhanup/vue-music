@@ -1,10 +1,8 @@
 <template>
-  <div class="wrapper">
-    <div class="content">
-      <router-view />
-    </div>
-    <Player v-if="showPlayer" />
+  <div class="container">
+    <router-view />
   </div>
+  <Player v-if="showPlayer" />
 </template>
 
 <script setup>
@@ -16,18 +14,9 @@ const store = useStore()
 const { showPlayer } = storeToRefs(store)
 </script>
 
-<style scoped lang="scss">
-.wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
+<style scoped>
+.container {
+  flex: 1;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-
-  .content {
-    flex: 1;
-    overflow: hidden;
-  }
 }
 </style>

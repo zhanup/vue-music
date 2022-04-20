@@ -51,7 +51,7 @@ const suggestList = ref([])
 const hots = ref([])
 const history = ref([])
 const songs = ref([])
-const songCount = ref(0)
+const hasMore = ref(true)
 const matchData = ref({})
 const pageNum = ref(1)
 let timer = -1
@@ -61,6 +61,11 @@ const refresh = () => {
   nextTick(() => {
     scroll.value?.refresh()
   })
+}
+
+// 上拉结束，为下一次上拉做准备
+const finishPullUp = () => {
+  scroll.value?.finishPullUp()
 }
 
 const getHotWord = async () => {
@@ -78,9 +83,8 @@ const getSuggest = async (keyword) => {
 // 搜索
 const getSongs = async (keyword) => {
   const { result } = await searchSongs(keyword, pageNum.value)
-
-  songs.value = [...songs.value, ...result.songs]
-  songCount.value = result.songCount
+  songs.value = result.songs
+  hasMore.value = result.hasMore
   refresh()
 }
 
@@ -127,6 +131,7 @@ const handleHotSearch = (keyword) => {
     history.value.unshift(keyword)
   }
   searchText.value = keyword
+  songs.value = []
 
   getSongs(keyword)
   getMultimatch(keyword)
@@ -155,12 +160,17 @@ const handleSuggestSearch = (keyword) => {
 
 // 加载更多歌曲
 const loadMore = async () => {
-  if (songCount.value !== songs.value.length && !(mode.value === 3)) {
+  if (!hasMore.value || mode.value !== 3) {
     return
   }
+
   pageNum.value += 1
-  await getSongs(searchText.value)
-  scroll.value?.finishPullUp()
+  const { result } = await searchSongs(searchText.value, pageNum.value)
+
+  songs.value = [...songs.value, ...result.songs]
+  hasMore.value = result.hasMore
+  refresh()
+  finishPullUp()
 }
 
 // 监听searchText，如果searchText为空，mode设置为1

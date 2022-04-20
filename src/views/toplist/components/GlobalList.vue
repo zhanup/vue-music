@@ -7,7 +7,7 @@
       :to="'/playlist/' + item.id"
     >
       <div class="item-hd">
-        <img :src="item.coverImgUrl" alt="" @load="imgLoad" />
+        <img v-lazy="item.coverImgUrl" alt="" @load="imgLoad" />
         <p>{{ item.updateFrequency }}</p>
       </div>
       <div class="column-bd f-thide">{{ item.name }}</div>

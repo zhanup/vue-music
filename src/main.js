@@ -2,9 +2,10 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { createPinia } from 'pinia'
+import lazyPlugin from 'vue3-lazy'
 // import VConsole from 'vconsole'
-import Icon from './plugins/icon'
-import './styles/index.scss'
+import Plugins from './components'
+import './assets/styles/index.scss'
 
 const app = createApp(App)
 const pinia = createPinia()
@@ -13,7 +14,14 @@ const pinia = createPinia()
   new VConsole()
 }
  */
-app.use(Icon)
+
+// 图片懒加载
+lazyPlugin.install(app, {
+  loading: require('@/assets/images/loading.gif'),
+  error: require('@/assets/images/loading.gif')
+})
+
+app.use(Plugins)
 app.use(pinia)
 app.use(router)
 app.mount('#app')

@@ -5,38 +5,20 @@ const routes = [
   {
     path: '/',
     redirect: '/home',
-  },
-  {
-    path: '/home',
-    name: 'home',
     component: MainLayout,
     children: [
       {
-        path: '',
+        path: 'home',
         name: 'home',
         component: () => import('@/views/home/Home.vue')
-      }
-    ]
-  },
-  {
-    path: '/toplist',
-    name: 'toplist',
-    component: MainLayout,
-    children: [
+      },
       {
-        path: '',
+        path: 'toplist',
         name: 'toplist',
         component: () => import('@/views/toplist/Toplist.vue')
-      }
-    ]
-  },
-  {
-    path: '/search',
-    name: 'search',
-    component: MainLayout,
-    children: [
+      },
       {
-        path: '',
+        path: 'search',
         name: 'search',
         component: () => import('@/views/search/Search.vue')
       }

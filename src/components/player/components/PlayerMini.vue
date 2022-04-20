@@ -75,10 +75,10 @@ const handleOpen = () => {
     background-position: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('@/assets/player/min-play.png');
+    background-image: url('@/assets/images/min-play.png');
 
     &.pause {
-      background-image: url('@/assets/player/min-pause.png');
+      background-image: url('@/assets/images/min-pause.png');
     }
   }
 
@@ -88,7 +88,7 @@ const handleOpen = () => {
     background-position: 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url('@/assets/player/min-list.png');
+    background-image: url('@/assets/images/min-list.png');
   }
 }
 </style>

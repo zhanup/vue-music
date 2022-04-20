@@ -236,27 +236,27 @@ onBeforeUnmount(() => {
   }
 
   .btn-mode_list {
-    background-image: url('@/assets/player/mode-list.png');
+    background-image: url('@/assets/images/mode-list.png');
   }
 
   .btn-prev {
-    background-image: url('@/assets/player/prev.png');
+    background-image: url('@/assets/images/prev.png');
   }
 
   .btn-next {
-    background-image: url('@/assets/player/next.png');
+    background-image: url('@/assets/images/next.png');
   }
 
   .btn-play {
-    background-image: url('@/assets/player/play.png');
+    background-image: url('@/assets/images/play.png');
   }
 
   .btn-pause {
-    background-image: url('@/assets/player/pause.png');
+    background-image: url('@/assets/images/pause.png');
   }
 
   .btn-list {
-    background-image: url('@/assets/player/list.png');
+    background-image: url('@/assets/images/list.png');
   }
 }
 </style>

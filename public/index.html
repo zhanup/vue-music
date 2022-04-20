@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- 引入字体图标 -->
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_3201213_2pmv55bux6n.css">
     <title>叮咚音乐</title>
   </head>
@@ -13,5 +14,9 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <!-- 加载第三方包的 CDN 链接 -->
+    <% htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js.forEach(cdnURL => { %>
+      <script src="<%= cdnURL %>"></script>
+    <% }) %>
   </body>
 </html>

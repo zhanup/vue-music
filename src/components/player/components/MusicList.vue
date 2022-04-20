@@ -119,7 +119,7 @@ watch(musicLength, () => {
       background-position: 50%;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url('@/assets/player/list-all-del.png');
+      background-image: url('@/assets/images/list-all-del.png');
     }
   }
 
@@ -163,7 +163,7 @@ watch(musicLength, () => {
       background-position: 50%;
       background-size: contain;
       background-repeat: no-repeat;
-      background-image: url('@/assets/player/list-del.png');
+      background-image: url('@/assets/images/list-del.png');
     }
   }
 }
