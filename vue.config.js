@@ -3,8 +3,8 @@ const CompressionPlugin = require("compression-webpack-plugin")
 
 const cdn = {
   js: [
-    'https://unpkg.com/vue@3.2.13/dist/vue.global.js',
-    'https://unpkg.com/vue-router@4.0.3/dist/vue-router.global.js'
+    'https://unpkg.com/vue@3.2.13/dist/vue.global.prod.js',
+    'https://unpkg.com/vue-router@4.0.3/dist/vue-router.global.prod.js'
   ]
 }
 
