@@ -2,7 +2,7 @@
 
 本项目基于Vue3开发的，是一个仿网易云音乐的移动端项目
 
-本项目的布局样式参照的是网易云音乐在Chrome开发者工具里切换为移动端的样式
+本项目的布局样式参照的是网易云音乐在Chrome开发者工具里切换为移动端的样式和[react-music](https://github.com/maomao1996/react-music)该项目
 
 本项目数据来源于开源项目：[NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)，需要自己部署
 
